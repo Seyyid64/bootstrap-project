@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css"
+    />
+    <link
+      href="https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Webentwicklung GmbH</title>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-dark navbar-dark py-3  fixed-top">
+      <div class="container">
+        <a href="#" class="navbar-brand">Webentwicklung</a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navmenu"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navmenu">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a href="#service" class="nav-link">Dienstleistungen</a>
+            </li>
+            <li class="nav-item">
+              <a href="#questions" class="nav-link">Fragen</a>
+            </li>
+            <li class="nav-item">
+              <a href="#team" class="nav-link">Team</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Showcase -->
+    <section
+      class="bg-dark text-light p-5 p-lg-0 pt-lg-5 text-center text-sm-start"
+    >
+      <div class="container">
+        <div class="d-sm-flex align-items-center justify-content-between">
+          <div>
+            <h1>Ihr <span class="text-warning"> Webentwicklung Gmbh </span></h1>
+            <p class="lead my-4">
+              Ihr Spezialist für e-Commerce, individuelle Web-Entwicklung und CMS Systeme
+            </p>
+            <button
+              class="btn btn-warning btn-lg"
+              data-bs-toggle="modal"
+              data-bs-target="#enroll"
+            >
+              Kontaktieren Sie uns
+            </button>
+          </div>
+          <img
+            class="img-fluid w-50 d-none d-sm-block"
+            src="img/showcase.svg"
+            alt=""
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="bg-warning text-dark p-5">
+      <div class="container">
+        <div class="d-md-flex justify-content-between align-items-center">
+          <h3 class="mb-3 mb-md-0">Abonnieren Sie Unsere Newsletter</h3>
+
+          <div class="input-group news-input">
+            <input type="text" class="form-control" placeholder="Email eingeben" />
+            <button class="btn btn-dark btn-lg" type="button">Absenden</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Boxes -->
+    <section class="p-5">
+      <div class="container">
+        <div class="row text-center g-4">
+          <div class="col-md ">
+            <div class="card bg-dark text-light">
+              <div class="card-body text-center">
+                <div class="h1 mb-3">
+                  <i class="bi bi-laptop"></i>
+                </div>
+                <h3 class="card-title mb-3">Virtual</h3>
+                <p class="card-text">
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Iure, quas quidem possimus dolorum esse eligendi?
+                </p>
+                <a href="#" class="btn btn-warning">Details Anzeigen</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md">
+            <div class="card bg-dark text-light">
+              <div class="card-body text-center">
+                <div class="h1 mb-3">
+                  <i class="bi bi-person-square"></i>
+                </div>
+                <h3 class="card-title mb-3">Hybrid</h3>
+                <p class="card-text">
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Iure, quas quidem possimus dolorum esse eligendi?
+                </p>
+                <a href="#" class="btn btn-warning">Details Anzeigen</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md">
+            <div class="card bg-dark text-light">
+              <div class="card-body text-center">
+                <div class="h1 mb-3">
+                  <i class="bi bi-people"></i>
+                </div>
+                <h3 class="card-title mb-3">In Person</h3>
+                <p class="card-text">
+                  Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                  Iure, quas quidem possimus dolorum esse eligendi?
+                </p>
+                <a href="#" class="btn btn-warning">Details Anzeigen</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Dienstleistugen -->
+    <section id="service" class="p-5">
+      <div class="container">
+        <div class="row align-items-center justify-content-between">
+          <div class="col-md">
+            <img src="img/fundamentals.svg" class="img-fluid" alt="" />
+          </div>
+          <div class="col-md p-5">
+            <h2>Web Entwicklung</h2>
+            <p class="lead">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+              Similique deleniti possimus magnam corporis ratione facere!
+            </p>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque
+              reiciendis eius autem eveniet mollitia, at asperiores suscipit
+              quae similique laboriosam iste minus placeat odit velit quos,
+              nulla architecto amet voluptates?
+            </p>
+            <a href="#" class="btn btn-dark mt-3">
+              <i class="bi bi-chevron-right"></i> Details Anzeigen
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="p-5 bg-dark text-light">
+      <div class="container">
+        <div class="row align-items-center justify-content-between">          
+          <div class="col-md order-md-last">
+            <img src="img/code.png" class="img-fluid" alt="" />
+          </div>
+          <div class="col-md p-5">
+            <h2>Software Entwicklung</h2>
+            <p class="lead">
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+              Similique deleniti possimus magnam corporis ratione facere!
+            </p>
+            <p>
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque
+              reiciendis eius autem eveniet mollitia, at asperiores suscipit
+              quae similique laboriosam iste minus placeat odit velit quos,
+              nulla architecto amet voluptates?
+            </p>
+            <a href="#" class="btn btn-light mt-3">
+              <i class="bi bi-chevron-right"></i> Details Anzeigen
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="service" class="p-5">
+        <div class="container">
+          <div class="row align-items-center justify-content-between">
+            <div class="col-md">
+              <img src="img/shop.jpg" class="img-fluid" alt="" />
+            </div>
+            <div class="col-md  p-5">
+              <h2>e-Commerce</h2>
+              <p class="lead">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Similique deleniti possimus magnam corporis ratione facere!
+              </p>
+              <p>
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque
+                reiciendis eius autem eveniet mollitia, at asperiores suscipit
+                quae similique laboriosam iste minus placeat odit velit quos,
+                nulla architecto amet voluptates?
+              </p>
+              <a href="#" class="btn btn-dark mt-3">
+                <i class="bi bi-chevron-right"></i> Details Anzeigen
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="service" class="p-5 bg-dark text-light">
+        <div class="container">
+          <div class="row align-items-center justify-content-between">
+            <div class="col-md order-md-last">
+              <img src="img/api.jpg" class="img-fluid" alt="" />
+            </div>
+            <div class="col-md p-5">
+                <h2>Schnittstellen</h2>
+                <p class="lead">
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Similique deleniti possimus magnam corporis ratione facere!
+                </p>
+                <p>
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cumque
+                  reiciendis eius autem eveniet mollitia, at asperiores suscipit
+                  quae similique laboriosam iste minus placeat odit velit quos,
+                  nulla architecto amet voluptates?
+                </p>
+                <a href="#" class="btn btn-light mt-3">
+                  <i class="bi bi-chevron-right"></i> Details Anzeigen
+                </a>
+              </div>
+          </div>
+        </div>
+      </section>
+
+    <!-- Question Accordion -->
+    <section id="questions" class="p-5">
+      <div class="container">
+        <h2 class="text-center my-4">Häufig gestellte Fragen</h2>
+        <div class="accordion accordion-flush" id="questions">
+          <!-- Item 1 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#question-one"
+              >
+                Wo kann ich euch finden?
+              </button>
+            </h2>
+            <div
+              id="question-one"
+              class="accordion-collapse collapse"
+              data-bs-parent="#questions"
+            >
+              <div class="accordion-body">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam
+                beatae fuga animi distinctio perspiciatis adipisci velit maiores
+                totam tempora accusamus modi explicabo accusantium consequatur,
+                praesentium rem quisquam molestias at quos vero. Officiis ad
+                velit doloremque at. Dignissimos praesentium necessitatibus
+                natus corrupti cum consequatur aliquam! Minima molestias iure
+                quam distinctio velit.
+              </div>
+            </div>
+          </div>
+          <!-- Item 2 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#question-two"
+              >
+                Was kosten eure Dienste?
+              </button>
+            </h2>
+            <div
+              id="question-two"
+              class="accordion-collapse collapse"
+              data-bs-parent="#questions"
+            >
+              <div class="accordion-body">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam
+                beatae fuga animi distinctio perspiciatis adipisci velit maiores
+                totam tempora accusamus modi explicabo accusantium consequatur,
+                praesentium rem quisquam molestias at quos vero. Officiis ad
+                velit doloremque at. Dignissimos praesentium necessitatibus
+                natus corrupti cum consequatur aliquam! Minima molestias iure
+                quam distinctio velit.
+              </div>
+            </div>
+          </div>
+          <!-- Item 3 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#question-three"
+              >
+                Wie schnell seid ihr?
+              </button>
+            </h2>
+            <div
+              id="question-three"
+              class="accordion-collapse collapse"
+              data-bs-parent="#questions"
+            >
+              <div class="accordion-body">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam
+                beatae fuga animi distinctio perspiciatis adipisci velit maiores
+                totam tempora accusamus modi explicabo accusantium consequatur,
+                praesentium rem quisquam molestias at quos vero. Officiis ad
+                velit doloremque at. Dignissimos praesentium necessitatibus
+                natus corrupti cum consequatur aliquam! Minima molestias iure
+                quam distinctio velit.
+              </div>
+            </div>
+          </div>
+          <!-- Item 4 -->
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button
+                class="accordion-button collapsed"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#question-four"
+              >
+                Welche Technologien beherrscht ihr?
+              </button>
+            </h2>
+            <div
+              id="question-four"
+              class="accordion-collapse collapse"
+              data-bs-parent="#questions"
+            >
+              <div class="accordion-body">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam
+                beatae fuga animi distinctio perspiciatis adipisci velit maiores
+                totam tempora accusamus modi explicabo accusantium consequatur,
+                praesentium rem quisquam molestias at quos vero. Officiis ad
+                velit doloremque at. Dignissimos praesentium necessitatibus
+                natus corrupti cum consequatur aliquam! Minima molestias iure
+                quam distinctio velit.
+              </div>
+            </div>
+          </div>
+          
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="team" class="p-5 bg-warning">
+      <div class="container">
+        <h2 class="text-center text-dark mt-4">Unser Team</h2>
+        <p class="lead text-center text-dark mb-5">
+            Mit mehr als 7 Jahren Erfahrung in der Webentwicklung, haben wir viele Prozesse und Fortschritte in der Webtechnologie miterleben dürfen.
+        </p>
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-3 ">
+            <div class="card bg-light shadow-sm">
+              <div class="card-body text-center">
+                <img
+                  src="https://randomuser.me/api/portraits/men/11.jpg"
+                  class="rounded-circle mb-3"
+                  alt=""
+                />
+                <h3 class="card-title mb-3">Max Mustermann</h3>
+                <p class="card-text">
+                  Geschäftsführer/Inhaber
+                </p>
+                <a href="#"><i class="bi bi-twitter text-dark mx-1"></i></a>
+                <a href="#"><i class="bi bi-facebook text-dark mx-1"></i></a>
+                <a href="#"><i class="bi bi-linkedin text-dark mx-1"></i></a>
+                <a href="#"><i class="bi bi-instagram text-dark mx-1"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3">
+            <div class="card bg-light shadow-sm">
+              <div class="card-body text-center">
+                <img
+                  src="https://randomuser.me/api/portraits/men/21.jpg"
+                  class="rounded-circle mb-3"
+                  alt=""
+                />
+                <h3 class="card-title mb-3">Felix</h3>
+                <p class="card-text">
+                  Senior Entwickler
+                </p>
+                <a href="#"><i class="bi bi-twitter text-dark mx-1"></i></a>
+                <a href="#"><i class="bi bi-facebook text-dark mx-1"></i></a>
+                <a href="#"><i class="bi bi-linkedin text-dark mx-1"></i></a>
+                <a href="#"><i class="bi bi-instagram text-dark mx-1"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3">
+            <div class="card bg-light shadow-sm">
+              <div class="card-body text-center">
+                <img
+                  src="https://randomuser.me/api/portraits/men/12.jpg"
+                  class="rounded-circle mb-3"
+                  alt=""
+                />
+                <h3 class="card-title mb-3">Alex</h3>
+                <p class="card-text">
+                  Webentwickler
+                </p>
+                <a href="#"><i class="bi bi-twitter text-dark mx-1"></i></a>
+                <a href="#"><i class="bi bi-facebook text-dark mx-1"></i></a>
+                <a href="#"><i class="bi bi-linkedin text-dark mx-1"></i></a>
+                <a href="#"><i class="bi bi-instagram text-dark mx-1"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-6 col-lg-3">
+            <div class="card bg-light shadow-sm">
+              <div class="card-body text-center">
+                <img
+                  src="https://randomuser.me/api/portraits/men/22.jpg"
+                  class="rounded-circle mb-3"
+                  alt=""
+                />
+                <h3 class="card-title mb-3">Chris</h3>
+                <p class="card-text">
+                  Webdesigner
+                </p>
+                <a href="#"><i class="bi bi-twitter text-dark mx-1"></i></a>
+                <a href="#"><i class="bi bi-facebook text-dark mx-1"></i></a>
+                <a href="#"><i class="bi bi-linkedin text-dark mx-1"></i></a>
+                <a href="#"><i class="bi bi-instagram text-dark mx-1"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact & Map -->
+    <section class="p-5">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-md">
+            <h2 class="text-center mb-4">SO FINDEN SIE ZU UNS</h2>
+            <ul class="list-group list-group-flush lead">
+              <li class="list-group-item">
+                <span class="fw-bold">Standort:</span> Musterstraße 10, 123456 Musterstadt
+              </li>
+              <li class="list-group-item">
+                <span class="fw-bold">Telefon:</span> +49 987 654 321 00
+              </li>
+              <li class="list-group-item">
+                <span class="fw-bold">Mobil:</span> +49 123 45 67 890
+              </li>
+              <li class="list-group-item">
+                <span class="fw-bold">Email:</span> info@webentwicklung.de
+              </li>
+            </ul>
+          </div>
+          <div class="col-md">
+            <div id="map"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="p-5 bg-dark text-white text-center position-relative">
+      <div class="container">
+        <p class="lead">Copyright &copy; 2022 Webentwicklung GmbH</p>
+
+        <a href="#" class="position-absolute bottom-0 end-0 p-5">
+          <i class="bi bi-arrow-up-circle h1"></i>
+        </a>
+      </div>
+    </footer>
+
+    <!-- Modal -->
+    <div
+      class="modal fade"
+      id="enroll"
+      tabindex="-1"
+      aria-labelledby="enrollLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="enrollLabel">Kontaktformular</h5>
+            <button
+              type="button"
+              class="btn-Abbrechen"
+              data-bs-dismiss="modal"
+              aria-label="Abbrechen"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <p class="lead">Wir freuen uns über Ihre E-Mail.</p>
+            <form>
+              <div class="mb-3">
+                <label for="first-name" class="col-form-label">
+                  Vorname:
+                </label>
+                <input type="text" class="form-control" id="first-name" />
+              </div>
+              <div class="mb-3">
+                <label for="last-name" class="col-form-label">Nachname:</label>
+                <input type="text" class="form-control" id="last-name" />
+              </div>
+              <div class="mb-3">
+                <label for="email" class="col-form-label">Email:</label>
+                <input type="email" class="form-control" id="email" />
+              </div>
+              <div class="mb-3">
+                <label for="phone" class="col-form-label">Phone:</label>
+                <input type="tel" class="form-control" id="phone" />
+              </div>
+              <div class="mb-3">
+                <label for="message" class="col-form-label">Nachricht:</label>
+                <textarea type="text" class="form-control" id="message" rows="3" ></textarea>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Abbrechen
+            </button>
+            <button type="button" class="btn btn-warning">Absenden</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.1.1/mapbox-gl.js"></script>
+
+    <script>
+      mapboxgl.accessToken =
+        'pk.eyJ1Ijoic2V5ZG8iLCJhIjoiY2t3MHY4NmtnMWcxYzJ2bGN1Y3o3YXpweCJ9.hKDOz_zH1I4rSF7NqTZSJg'
+      var map = new mapboxgl.Map({
+        container: 'map',
+        style: 'mapbox://styles/mapbox/streets-v11',
+        center: [11.576124, 48.137154],
+        zoom: 18,
+      })
+    </script>
+  </body>
+</html>
